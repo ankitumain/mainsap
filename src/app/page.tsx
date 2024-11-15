@@ -1,5 +1,7 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
+import AnimatedButton from "./components/AnimateButton";
+import AnimatedSection from "./components/AnimateSection";
 
 export default function Home() {
   return (
@@ -8,10 +10,8 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-grow bg-gray-100 p-6">
         <div className="container mx-auto text-center">
-          <p className="text-gray-700">
-            This is the main content of the page. Use this area to provide your
-            users with valuable information.
-          </p>
+          <AnimatedButton>Click Me</AnimatedButton>
+          <AnimatedSection />
         </div>
       </main>
       <Footer />
