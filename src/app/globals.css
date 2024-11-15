@@ -19,3 +19,18 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer base {
+  @font-face {
+    font-family: "KHTeka Medium";
+    font-display: swap;
+    src: url("./fonts/KHTeka-Medium.woff2") format("woff2");
+    font-style: normal;
+  }
+
+  .body-40 {
+    @apply text-[40px];
+    @apply tracking-neg-2p;
+    @apply font-khteka-medium;
+  }
+}
