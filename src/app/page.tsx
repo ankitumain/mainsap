@@ -1,10 +1,12 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
+import { Intro } from "@/components/intro";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
+      {/* <Header /> */}
+      <Intro />
       {/* Main Content */}
       <main className="flex-grow bg-gray-100 p-6">
         <div className="container mx-auto text-center">
