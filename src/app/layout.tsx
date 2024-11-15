@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import "./globals.css";
+
+gsap.registerPlugin(useGSAP);
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
