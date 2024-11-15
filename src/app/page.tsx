@@ -1,11 +1,13 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import Text from "@/components/text/Text";
+import HorizontalScroll from "@/components/text/animations/HorizontalScroll";
+
 import { FadeIn } from "@/components/AnimatedText/FadeIn";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen font-khteka">
       <Header />
       {/* Main Content */}
       <main className="flex-grow bg-black text-white">
@@ -19,6 +21,7 @@ export default function Home() {
             </p>
           </FadeIn>
         </Text>
+        <HorizontalScroll />
         <Text className="bg-dark-blue">
           <FadeIn>
             <p>
@@ -68,6 +71,7 @@ export default function Home() {
             </p>
           </FadeIn>
         </Text>
+        <div className="container mx-auto text-center"></div>
       </main>
       <Footer />
     </div>
