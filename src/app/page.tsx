@@ -2,19 +2,20 @@ import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { Intro } from "@/components/intro";
 
+import {FadeIn} from "@/components/AnimatedText/FadeIn";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* <Header /> */}
       <Intro />
+      <Header />
+      <FadeIn>
+        <h1 className="text-6xl font-bold text-center">Welcome to mainsap</h1>
+      </FadeIn>
       {/* Main Content */}
-      <main className="flex-grow bg-gray-100 p-6">
-        <div className="container mx-auto text-center">
-          <p className="text-gray-700">
-            This is the main content of the page. Use this area to provide your
-            users with valuable information.
-          </p>
-        </div>
+      <main className="flex-grow bg-black p-6">
+        <div className="container mx-auto text-center"></div>
       </main>
       <Footer />
     </div>
