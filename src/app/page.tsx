@@ -1,13 +1,10 @@
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="bg-blue-600 text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">MAINSAP</h1>
-        </div>
-      </header>
-
+      <Header />
       {/* Main Content */}
       <main className="flex-grow bg-gray-100 p-6">
         <div className="container mx-auto text-center">
@@ -17,13 +14,7 @@ export default function Home() {
           </p>
         </div>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white p-4">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 MAINSAP. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
