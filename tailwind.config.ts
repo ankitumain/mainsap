@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        red: "#EF4123",
+        yellow: "#FFA305",
+        "dark-blue": "#002643",
       },
       fontFamily: {
         "khteka-medium": ["KHTeka Medium", "sans-serif"],
