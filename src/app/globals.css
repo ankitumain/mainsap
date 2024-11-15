@@ -34,3 +34,8 @@ body {
     @apply font-khteka-medium;
   }
 }
+
+.font-khteka {
+  @apply tracking-neg-2p;
+  @apply font-khteka-medium;
+}
