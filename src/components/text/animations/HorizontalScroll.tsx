@@ -11,15 +11,16 @@ export default function HorizontalScroll() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const paragraphs = [
-    "Part One",
-    "Part Two",
-    "Part Three",
-    "Part Four",
-    "Part Five",
+    {
+      text: "Kurppa Hosk",
+      secondaryText:
+        "Transforming brands and organisations to drive real change",
+    },
+    // { text: "Blob", secondaryText: "hello" },
   ];
   const styles = {
-    odd: "bg-black text-white",
-    even: "bg-white text-black",
+    odd: "bg-black text-white justify-start",
+    even: "bg-white text-black justify-end",
   };
 
   useEffect(() => {
@@ -49,19 +50,24 @@ export default function HorizontalScroll() {
   }, []);
 
   return (
-    <div className="overflow-x-hidden font-khteka text-[300px] bg-red-400">
+    <div className="overflow-x-hidden font-khteka bg-red-400">
       <div ref={sectionRef} className="flex flex-nowrap min-h-screen">
         {paragraphs.map((paragraph, index) => (
-          <div
-            key={index}
-            className={clsx(
-              "flex justify-center items-center transition-colors duration-300 min-w-[100vw]",
-              index % 2 === 0 ? styles.even : styles.odd,
-              "flex-shrink-0 px-32"
-            )}
-          >
-            {paragraph}
-          </div>
+          <>
+            <div
+              key={index}
+              className={clsx(
+                "flex items-center transition-colors duration-300 min-w-[100vw]",
+                index % 2 === 0 ? styles.even : styles.odd,
+                "flex-shrink-0 text-[300px]"
+              )}
+            >
+              <div>{paragraph.text}</div>
+              <div className="px-32 mt-[-190px] text-3xl">
+                {paragraph.secondaryText}
+              </div>
+            </div>
+          </>
         ))}
       </div>
     </div>
