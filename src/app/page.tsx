@@ -1,11 +1,11 @@
 import Footer from "@/components/footer/Footer";
 // import Header from "@/components/header/Header";
-import { Intro } from "@/components/intro";
 import FadeInText from "@/components/AnimatedText/FadeInText";
+import Balloon from "@/components/Balloon/Balloon";
+import { YearBlock } from "@/components/YearBlock/YearBlock";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
 import CustomCursor from "@/components/customCursor/CustomCursor";
-import SlotCounter from 'react-slot-counter';
-import Balloon from "@/components/Balloon/Balloon";
+import { Intro } from "@/components/intro";
 
 const horizontalScrollTexts = [
   {
@@ -29,40 +29,42 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex-grow bg-transparent text-white z-10 pb-[100vh]">
         <section>
-        <div className="h-svh w-full flex items-center bg-[#EF4123] font-khteka px-12">
-          <div className="flex items-start">
-            <h2 className="text-[400px] tracking-tighter"><SlotCounter animateOnVisible value={2019} duration={2} /></h2>
-
-          </div>
-        </div>
-        <section
-          className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
-        >
-          <div className="w-[700px]">
-            <p className="mb-10">A Umain hackathon project</p>
-            <div className="text-[100px] text-center">
-              <p className="w-full ">Mainsap</p>
-              <p className="mt-[-60px]">was born</p>
+          {/* <div className="h-svh w-full flex items-center bg-[#EF4123] font-khteka px-12">
+            <div className="flex items-start">
+              <h2 className="text-[400px] tracking-tighter">
+                <SlotCounter animateOnVisible value={2019} duration={2} />
+              </h2>
             </div>
-            <div className="text-center">
-              <p>Ankit</p>
-              <p>Anton</p>
-              <p>Faraz</p>
-              <p></p>
-              <p></p>
-              <p></p>
+          </div> */}
+          <YearBlock />
+          <section
+            className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
+          >
+            <div className="w-[700px]">
+              <p className="mb-10">A Umain hackathon project</p>
+              <div className="text-[100px] text-center">
+                <p className="w-full ">Mainsap</p>
+                <p className="mt-[-60px]">was born</p>
+              </div>
+              <div className="text-center">
+                <p>Ankit</p>
+                <p>Anton</p>
+                <p>Faraz</p>
+                <p>Vika</p>
+                <p>Jon</p>
+                <p>Tomo</p>
+              </div>
             </div>
-          </div>
-        </section>
-        <FadeInText className="bg-yellow">
-          <p>
-            Kurppa Hosk, Animal, Keybroker and Curamando come together to build
-            a new challenger. 300 pioneering management consultants and digital
-            experts – brought together to make our clients winners in a
-            transformative landscape.
-          </p>
-        </FadeInText>
-        <HorizontalScroll paragraphs={[horizontalScrollTexts[0]]} />
+          </section>
+          <FadeInText className="bg-yellow">
+            <p>
+              Kurppa Hosk, Animal, Keybroker and Curamando come together to
+              build a new challenger. 300 pioneering management consultants and
+              digital experts – brought together to make our clients winners in
+              a transformative landscape.
+            </p>
+          </FadeInText>
+          <HorizontalScroll paragraphs={[horizontalScrollTexts[0]]} />
         </section>
         <FadeInText className="bg-dark-blue">
           <p>
