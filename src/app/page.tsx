@@ -8,7 +8,8 @@ import CustomCursor from "@/components/customCursor/CustomCursor";
 const horizontalScrollTexts = [
   {
     text: "Kurppa Hosk",
-    secondaryText: "Transforming brands and organisations to drive real change",
+    secondaryText:
+      "Transforming brands and organisations to drive real change.",
   },
   {
     text: "Kurppa Hosk Communications",
