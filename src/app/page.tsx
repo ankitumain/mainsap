@@ -3,6 +3,18 @@ import Header from "@/components/header/Header";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
 
+const horizontalScrollTexts = [
+  {
+    text: "Kurppa Hosk",
+    secondaryText: "Transforming brands and organisations to drive real change",
+  },
+  {
+    text: "Kurppa Hosk Communications",
+    secondaryText:
+      "Building unforgettable brands in the new age of communication.",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen font-khteka">
@@ -17,7 +29,7 @@ export default function Home() {
             transformative landscape.
           </p>
         </FadeInText>
-        <HorizontalScroll />
+        <HorizontalScroll paragraphs={[horizontalScrollTexts[0]]} />
         <FadeInText className="bg-dark-blue">
           <p>
             ARC Arise Consulting Group launches and Cupole joins the family.
@@ -49,6 +61,7 @@ export default function Home() {
             Experience, and Innovation, Technology and Data.
           </p>
         </FadeInText>
+        <HorizontalScroll paragraphs={[horizontalScrollTexts[1]]} />
         <FadeInText className="bg-dark-blue">
           <p className="mb-10">ARC becomes Eidra</p>
           <p>
