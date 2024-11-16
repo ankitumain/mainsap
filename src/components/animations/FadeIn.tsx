@@ -1,10 +1,8 @@
 "use client";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef, useState } from "react";
 import { SplitByWord } from "../splitText/splitByWord";
 
-gsap.registerPlugin(ScrollTrigger);
 
 export function FadeIn({
   children,

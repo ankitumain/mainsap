@@ -7,8 +7,8 @@ export function Intro() {
     const ref = useRef<HTMLDivElement>(null);
     useGSAP(() =>{
         gsap.to('.overlay', {opacity: 0, duration: 0.5, delay: 0, ease: 'Expo.Out'});
-        gsap.from('svg', {scale: 50, xPercent: 1274, yPercent: 1920, duration: 0.75, delay: 2,  ease: 'Expo.Out'});
-        gsap.from('.heading-cont', {rotate: 15, duration: 0.75, delay: 2.1,  ease: 'Expo.Out'});
+        gsap.from('svg', {scale: 50, xPercent: 1274, yPercent: 1920, duration: 0.75, delay: 0.5,  ease: 'Expo.Out'});
+        gsap.from('.heading-cont', {rotate: 15, duration: 0.75, delay: 0.6,  ease: 'Expo.Out'});
     }, {scope: ref});
    return ( 
     <div ref={ref} className="w-full min-h-svh bg-black overflow-hidden relative">
