@@ -25,7 +25,7 @@ const CurvedText = () => {
           onEnter: () => {
             setTimeout(() => {
               setCurrentFontSize(1);
-            }, 500);
+            }, 1000);
           },
         },
       });
@@ -37,11 +37,11 @@ const CurvedText = () => {
   return (
     <section
       ref={ref}
-      className={`h-screen w-screen flex justify-center items-center font-khteka bg-white text-black`}
+      className={`h-screen w-screen flex justify-center items-center font-khteka-40 bg-white text-black`}
     >
       <div
         className={clsx(
-          "h-full w-full flex justify-end items-end bg-white text-black font-khteka",
+          "h-full w-full flex justify-end items-end bg-white text-black font-khteka-40",
           fontSizes[currentFontSize]
         )}
       >
@@ -74,7 +74,7 @@ const CurvedText = () => {
                 &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ankit &nbsp;&nbsp;
                 Anton &nbsp;&nbsp; Faraz &nbsp;&nbsp; Jon &nbsp;&nbsp; Tomo
-                &nbsp;&nbsp; Viktoriia
+                &nbsp;&nbsp; Vika
               </textPath>
             </text>
           </svg>

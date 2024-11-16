@@ -12,7 +12,7 @@ export default function Footer() {
     }
 
     return (
-      window.innerHeight + window.scrollY >= document.body.offsetHeight - 30
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 100
     );
   };
 
