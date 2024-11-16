@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --blur: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,6 +34,10 @@ body {
     @apply tracking-neg-2p;
     @apply font-khteka-medium;
   }
+}
+
+.blur-anim {
+  filter: blur(var(--blur));
 }
 
 .font-khteka {

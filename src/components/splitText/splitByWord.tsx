@@ -7,7 +7,7 @@ export function SplitByWord({children, callback} : {children: React.ReactNode, c
     const [splitted, setSplitted] = useState(false);
     useEffect(() => {
         if (!ref.current) return
-        const split = new SplitType(ref.current, {types: 'words', tagName: 'span', wordClass: 'word opacity-0'})
+        const split = new SplitType(ref.current, {types: 'words', tagName: 'span', wordClass: 'word opacity-0 scale-[0.99] blur-lg origin-top-left blur-anim'})
         setSplitted(true)
         if (callback) callback()
         return () => {
