@@ -70,6 +70,7 @@ export const CounterSection = ({
   });
 
   const characterType = isNaN(Number(character)) ? "letter" : "number";
+  const duration = (index + 1) * 0.05;
 
   useEffect(() => {
     if (characterType === "number") {
@@ -104,7 +105,9 @@ export const CounterSection = ({
           "transition-transform duration-1000 ease-in-out font-bold font-KHInterference text-[40px] uppercase",
           hasAnimated ? "-translate-y-[1.5em]" : "translate-y-0"
         )}
-        style={{ transitionDuration: `${(index + 1) * 0.02}s` }}
+        style={{
+          transitionDuration: `${duration}s`,
+        }}
       >
         <span>{previousCharacter}</span>
         <span>{character}</span>
