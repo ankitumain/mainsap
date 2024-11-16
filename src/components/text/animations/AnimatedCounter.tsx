@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef, RefObject } from "react";
 import clsx from "clsx";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { RefObject, useEffect, useRef, useState } from "react";
 
 type IntersectionObserverOptions = IntersectionObserverInit;
 type UseIntersectionObserverReturn = [RefObject<HTMLDivElement>, boolean];
@@ -34,7 +33,6 @@ const useIntersectionObserver = (
 const CounterSection = ({
   character,
   previousCharacter,
-  index = 0,
 }: {
   character: string;
   previousCharacter: string;
