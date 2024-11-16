@@ -24,9 +24,25 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <CustomCursor />
       {/* <Header /> */}
-      <Intro />
+      {/* <Intro /> */}
       {/* Main Content */}
       <main className="flex-grow bg-transparent text-white z-10 pb-[100vh]">
+        <section
+          className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
+        >
+          <div className="w-[700px]">
+            <p className="mb-10">A Umain hackathon project</p>
+            <div className="text-[100px]">
+              <p>Mainsap</p>
+              <p className="mt-[-60px]">was born</p>
+            </div>
+            <p>
+              Eidra launches, reflecting the continued journey ahead. Eidra is a
+              manifestation of bigger ambitions, more members of the consultancy
+              collective, and an ambition to create great change.
+            </p>
+          </div>
+        </section>
         <FadeInText className="bg-yellow">
           <p>
             Kurppa Hosk, Animal, Keybroker and Curamando come together to build
@@ -76,6 +92,7 @@ export default function Home() {
             collective, and an ambition to create great change.
           </p>
         </FadeInText>
+
         <Balloon />
         <div className="container mx-auto text-center"></div>
       </main>
