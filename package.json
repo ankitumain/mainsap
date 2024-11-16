@@ -15,6 +15,7 @@
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
+    "react-slot-counter": "^3.0.1",
     "split-type": "^0.3.4",
     "tailwind": "^4.0.0"
   },
