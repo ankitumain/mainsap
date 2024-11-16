@@ -1,8 +1,9 @@
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto text-center">
-        <p>&copy; 2024 MAINSAP. All rights reserved.</p>
+    <footer className="h-screen w-screen z-0 fixed bg-black text-white p-4 font-khteka">
+      <div className="container h-full w-full flex flex-col items-center justify-center mx-auto">
+        <h1 className="text-[200px] text-center">Fin.</h1>
+        <p>Made by Umain.</p>
       </div>
     </footer>
   );

@@ -25,7 +25,7 @@ export default function Home() {
       {/* <Header /> */}
       <Intro />
       {/* Main Content */}
-      <main className="flex-grow bg-black text-white">
+      <main className="flex-grow bg-transparent text-white z-10 pb-[100vh]">
         <FadeInText className="bg-yellow">
           <p>
             Kurppa Hosk, Animal, Keybroker and Curamando come together to build
