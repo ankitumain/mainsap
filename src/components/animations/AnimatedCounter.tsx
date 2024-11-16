@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useRef, RefObject } from "react";
 import clsx from "clsx";
+import { RefObject, useEffect, useRef, useState } from "react";
 
 type IntersectionObserverOptions = IntersectionObserverInit;
 type UseIntersectionObserverReturn = [RefObject<HTMLDivElement>, boolean];
@@ -91,7 +91,7 @@ export const CounterSection = ({
         setHasAnimated(true);
       }, 400);
     }
-  }, [isIntersecting, hasAnimated, character]);
+  }, [isIntersecting, hasAnimated, character, characterType]);
 
   return (
     <span
