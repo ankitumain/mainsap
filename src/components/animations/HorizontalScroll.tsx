@@ -7,17 +7,19 @@ import clsx from "clsx";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function HorizontalScroll() {
-  const sectionRef = useRef<HTMLDivElement>(null);
+type Paragraph = {
+  text: string;
+  secondaryText: string;
+};
 
-  const paragraphs = [
-    {
-      text: "Kurppa Hosk",
-      secondaryText:
-        "Transforming brands and organisations to drive real change",
-    },
-    // { text: "Blob", secondaryText: "hello" },
-  ];
+type HorizontalScrollProps = {
+  paragraphs: Paragraph[];
+};
+
+export default function HorizontalScroll({
+  paragraphs,
+}: HorizontalScrollProps) {
+  const sectionRef = useRef<HTMLDivElement>(null);
   const styles = {
     odd: "bg-black text-white justify-start",
     even: "bg-white text-black justify-end",
