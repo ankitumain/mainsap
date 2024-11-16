@@ -40,7 +40,7 @@ export const YearBlock = () => {
       ref={containerRef}
       className="relative overflow-hidden w-full h-screen bg-[#EF4123]"
     >
-      <ImageTrail ref={trailRef} images={[1, 2, 3, 4, 5]} />
+      <ImageTrail ref={trailRef} images={[26, 25, 24, 23, 22, 21]} />
       <div className="flex items-start">
         <h2 className="text-[400px] tracking-tighter">
           <SlotCounter animateOnVisible value={2019} duration={2} />
