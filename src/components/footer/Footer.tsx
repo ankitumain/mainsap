@@ -6,8 +6,13 @@ export default function Footer() {
   const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
 
   const hasScrolledToBottom = () => {
-    if (!window) return false;
-    window.innerHeight + window.scrollY >= document.body.offsetHeight - 30;
+    if (!window) {
+      return false;
+    } else {
+      return (
+        window.innerHeight + window.scrollY >= document.body.offsetHeight - 30
+      );
+    }
   };
 
   window.onscroll = () => {
