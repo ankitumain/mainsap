@@ -52,7 +52,7 @@ export default function HorizontalScroll({
   }, []);
 
   return (
-    <div className="overflow-x-hidden font-khteka bg-red-400">
+    <div className="overflow-x-hidden">
       <div ref={sectionRef} className="flex flex-nowrap min-h-screen">
         {paragraphs.map((paragraph, index) => (
           <>
@@ -64,8 +64,8 @@ export default function HorizontalScroll({
                 "flex-shrink-0 text-[300px]"
               )}
             >
-              <div>{paragraph.text}</div>
-              <div className="px-32 mt-[-190px] text-3xl">
+              <div className="font-KHInterference">{paragraph.text}</div>
+              <div className="px-32 mt-[-190px] font-khteka">
                 {paragraph.secondaryText}
               </div>
             </div>

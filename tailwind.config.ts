@@ -17,6 +17,7 @@ export default {
       },
       fontFamily: {
         "khteka-medium": ["KHTeka Medium", "sans-serif"],
+        "khinterference-light": ["KHInterference Light", "sans-serif"],
       },
       letterSpacing: {
         "neg-6p": "-0.06em",
