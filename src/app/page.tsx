@@ -3,6 +3,7 @@ import Footer from "@/components/footer/Footer";
 import { Intro } from "@/components/intro";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
+import CustomCursor from "@/components/customCursor/CustomCursor";
 
 const horizontalScrollTexts = [
   {
@@ -20,6 +21,7 @@ const horizontalScrollTexts = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      <CustomCursor />
       {/* <Header /> */}
       <Intro />
       {/* Main Content */}
