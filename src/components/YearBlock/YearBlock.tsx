@@ -2,9 +2,10 @@
 
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
-import ImageTrail from "./ImageTrail";
+import SlotCounter from "react-slot-counter";
+import ImageTrail from "../animations/ImageTrail";
 
-export default function ImageTrailContainer() {
+export const YearBlock = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const trailRef = useRef<HTMLDivElement>(null);
 
@@ -37,12 +38,14 @@ export default function ImageTrailContainer() {
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden w-full h-screen bg-gray-200"
+      className="relative overflow-hidden w-full h-screen bg-[#EF4123]"
     >
-      <ImageTrail ref={trailRef} images={[1, 2, 3, 4, 5]} />
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold">Move Your Cursor!</h1>
+      <ImageTrail ref={trailRef} images={[26, 25, 24, 23, 22, 21]} />
+      <div className="flex items-start">
+        <h2 className="text-[400px] tracking-tighter">
+          <SlotCounter animateOnVisible value={2019} duration={2} />
+        </h2>
       </div>
     </div>
   );
-}
+};
