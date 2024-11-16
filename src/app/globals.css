@@ -45,8 +45,8 @@ body {
     @apply tracking-neg-4p;
     @apply font-khinterference-light;
   }
-  
+}
+
 .blur-anim {
   filter: blur(var(--blur));
-}
 }
