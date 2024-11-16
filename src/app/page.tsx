@@ -3,12 +3,13 @@ import Header from "@/components/header/Header";
 import { Intro } from "@/components/intro";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
-
+import CustomCursor from "@/components/customCursor/CustomCursor";
 
 const horizontalScrollTexts = [
   {
     text: "Kurppa Hosk",
-    secondaryText: "Transforming brands and organisations to drive real change",
+    secondaryText:
+      "Transforming brands and organisations to drive real change.",
   },
   {
     text: "Kurppa Hosk Communications",
@@ -22,8 +23,11 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
     <Header />
     <Intro />
+      <CustomCursor />
+      {/* <Header /> */}
+      <Intro />
       {/* Main Content */}
-      <main className="flex-grow bg-black text-white">
+      <main className="flex-grow bg-transparent text-white z-10 pb-[100vh]">
         <FadeInText className="bg-yellow">
           <p>
             Kurppa Hosk, Animal, Keybroker and Curamando come together to build

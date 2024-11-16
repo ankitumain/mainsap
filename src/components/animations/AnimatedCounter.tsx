@@ -1,7 +1,6 @@
 "use client";
 
 import clsx from "clsx";
-import { gsap } from "gsap";
 import { RefObject, useEffect, useRef, useState } from "react";
 
 type IntersectionObserverOptions = IntersectionObserverInit;
@@ -30,74 +29,86 @@ const useIntersectionObserver = (
   return [targetRef, isIntersecting];
 };
 
-const CounterSection = ({
+export const AnimatedCounter = ({ text }: { text: string }) => {
+  const words = text.split(" ");
+  let counter = 0;
+
+  return (
+    <span className="flex flex-row items-center gap-4 flex-wrap">
+      {words.map((word, wordIndex) => {
+        return (
+          <span key={wordIndex} className="flex flex-row">
+            {word.split("").map((character, characterIndex) => {
+              counter++;
+              return (
+                <CounterSection
+                  key={characterIndex}
+                  character={character}
+                  index={counter}
+                />
+              );
+            })}
+          </span>
+        );
+      })}
+    </span>
+  );
+};
+
+export const CounterSection = ({
   character,
-  previousCharacter,
+  index = 0,
 }: {
   character: string;
-  previousCharacter: string;
   index?: number;
 }) => {
+  const [previousCharacter, setPreviousCharacter] = useState(character);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [ref, isIntersecting] = useIntersectionObserver({
     rootMargin: "0px 0px -50px 0px",
     threshold: 0.1,
   });
 
-  const containerRef = useRef<HTMLDivElement>(null);
-  const node0Ref = useRef<HTMLDivElement>(null);
-  const node1Ref = useRef<HTMLDivElement>(null);
+  const characterType = isNaN(Number(character)) ? "letter" : "number";
 
   useEffect(() => {
-    if (isIntersecting && !hasAnimated) {
-      gsap.to([node0Ref.current, node1Ref.current], {
-        y: "+=1em",
-        duration: 0.9,
-        delay: 0.25,
-        ease: "power3.inOut",
-        onComplete: swapNodes,
-      });
-      setHasAnimated(true);
-    }
-  }, [isIntersecting, hasAnimated]);
+    if (characterType === "number") {
+      const characterMinusOne = Number(character) - 1;
 
-  const swapNodes = () => {
-    if (node0Ref.current && node1Ref.current) {
-      node0Ref.current.textContent = character;
-      gsap.set([node0Ref.current, node1Ref.current], { y: "-=1em" });
+      setPreviousCharacter(
+        characterMinusOne <= 0 ? "9" : String(characterMinusOne)
+      );
+    } else if (characterType === "letter") {
+      const characterMinusOne = character.charCodeAt(0) - 1;
+
+      setPreviousCharacter(
+        characterMinusOne <= 64 ? "Z" : String.fromCharCode(characterMinusOne)
+      );
     }
-  };
+
+    if (isIntersecting && !hasAnimated) {
+      setTimeout(() => {
+        setHasAnimated(true);
+      }, 400);
+    }
+  }, [isIntersecting, hasAnimated, character, characterType]);
 
   return (
-    <div
+    <span
       ref={ref}
-      className={clsx("relative overflow-hidden inline-block")}
-      style={{ height: "1em" }}
+      className={clsx("relative overflow-hidden h-[1.5em] inline-block")}
     >
-      <div
-        ref={containerRef}
-        className={clsx("relative", "text-[20em] font-bold font-mono")}
-        style={{
-          height: "2em", // height of two characters
-        }}
+      <span
+        className={clsx(
+          "flex flex-col items-center",
+          "transition-transform duration-1000 ease-in-out font-bold font-KHInterference text-[40px] uppercase",
+          hasAnimated ? "-translate-y-[1.5em]" : "translate-y-0"
+        )}
+        style={{ transitionDuration: `${(index + 1) * 0.02}s` }}
       >
-        <div
-          ref={node0Ref}
-          className="absolute top-0 left-0 w-full"
-          style={{ height: "1em" }}
-        >
-          {previousCharacter}
-        </div>
-        <div
-          ref={node1Ref}
-          className="absolute top-full left-0 w-full"
-          style={{ height: "1em" }}
-        >
-          {character}
-        </div>
-      </div>
-    </div>
+        <span>{previousCharacter}</span>
+        <span>{character}</span>
+      </span>
+    </span>
   );
 };
-
-export default CounterSection;

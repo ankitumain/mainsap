@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import clsx from "clsx";
+import { AnimatedCounter } from "@/components/animations/AnimatedCounter";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,10 +21,6 @@ export default function HorizontalScroll({
   paragraphs,
 }: HorizontalScrollProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const styles = {
-    odd: "bg-black text-white justify-start",
-    even: "bg-white text-black justify-end",
-  };
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -52,7 +49,7 @@ export default function HorizontalScroll({
   }, []);
 
   return (
-    <div className="overflow-x-hidden font-khteka bg-red-400">
+    <div className="overflow-x-hidden bg-white">
       <div ref={sectionRef} className="flex flex-nowrap min-h-screen">
         {paragraphs.map((paragraph, index) => (
           <>
@@ -60,13 +57,13 @@ export default function HorizontalScroll({
               key={index}
               className={clsx(
                 "flex items-center transition-colors duration-300 min-w-[100vw]",
-                index % 2 === 0 ? styles.even : styles.odd,
+                "bg-white text-black justify-end",
                 "flex-shrink-0 text-[300px]"
               )}
             >
-              <div>{paragraph.text}</div>
-              <div className="px-32 mt-[-190px] text-3xl">
-                {paragraph.secondaryText}
+              <div className="font-KHInterference">{paragraph.text}</div>
+              <div className="px-32 mt-[-190px] font-khteka">
+                <AnimatedCounter text={paragraph.secondaryText} />
               </div>
             </div>
           </>
