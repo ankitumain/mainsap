@@ -11,7 +11,7 @@ export default function FadeInText({ children, className }: TextProps) {
       className={`py-96 px-14 flex justify-end font-khteka ${className}`}
     >
       <div className="w-2/3">
-        <FadeIn>{children}</FadeIn>
+        <FadeIn stagger={0.09}>{children}</FadeIn>
       </div>
     </section>
   );
