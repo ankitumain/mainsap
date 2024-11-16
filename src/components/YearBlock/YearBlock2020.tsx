@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import SlotCounter from "react-slot-counter";
 import ImageTrail from "../animations/ImageTrail";
 
-export const YearBlock = () => {
+export const YearBlock2020 = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const trailRef = useRef<HTMLDivElement>(null);
 
@@ -38,12 +38,12 @@ export const YearBlock = () => {
   return (
     <div
       ref={containerRef}
-      className="relative overflow-hidden w-full h-screen bg-[#EF4123]"
+      className="relative overflow-hidden w-full h-screen bg-[#FFA305]"
     >
       <ImageTrail ref={trailRef} images={[26, 25, 24, 23, 22, 21]} />
       <div className="flex items-start">
         <h2 className="text-[400px] tracking-tighter">
-          <SlotCounter animateOnVisible value={2019} duration={2} />
+          <SlotCounter animateOnVisible value={2020} duration={2} />
         </h2>
       </div>
     </div>

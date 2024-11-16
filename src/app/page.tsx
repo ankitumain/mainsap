@@ -2,7 +2,9 @@ import Footer from "@/components/footer/Footer";
 // import Header from "@/components/header/Header";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import Balloon from "@/components/Balloon/Balloon";
-import { YearBlock } from "@/components/YearBlock/YearBlock";
+import { YearBlock2019 } from "@/components/YearBlock/YearBlock2019";
+import { YearBlock2020 } from "@/components/YearBlock/YearBlock2020";
+import { YearBlock2021 } from "@/components/YearBlock/YearBlock2021";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
 import CustomCursor from "@/components/customCursor/CustomCursor";
 import { Intro } from "@/components/intro";
@@ -14,9 +16,8 @@ const horizontalScrollTexts = [
       "Transforming brands and organisations to drive real change.",
   },
   {
-    text: "Kurppa Hosk Communications",
-    secondaryText:
-      "Building unforgettable brands in the new age of communication.",
+    text: "Umain",
+    secondaryText: "Shape, ship, scale",
   },
 ];
 
@@ -36,26 +37,7 @@ export default function Home() {
               </h2>
             </div>
           </div> */}
-          <YearBlock />
-          <section
-            className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
-          >
-            <div className="w-[700px]">
-              <p className="mb-10">A Umain hackathon project</p>
-              <div className="text-[100px] text-center">
-                <p className="w-full ">Mainsap</p>
-                <p className="mt-[-60px]">was born</p>
-              </div>
-              <div className="text-center">
-                <p>Ankit</p>
-                <p>Anton</p>
-                <p>Faraz</p>
-                <p>Vika</p>
-                <p>Jon</p>
-                <p>Tomo</p>
-              </div>
-            </div>
-          </section>
+          <YearBlock2019 />
           <FadeInText className="bg-yellow">
             <p>
               Kurppa Hosk, Animal, Keybroker and Curamando come together to
@@ -66,11 +48,14 @@ export default function Home() {
           </FadeInText>
           <HorizontalScroll paragraphs={[horizontalScrollTexts[0]]} />
         </section>
+        <YearBlock2020 />
         <FadeInText className="bg-dark-blue">
           <p>
             ARC Arise Consulting Group launches and Cupole joins the family.
           </p>
         </FadeInText>
+        <YearBlock2021 />
+        <HorizontalScroll paragraphs={[horizontalScrollTexts[1]]} />
         <FadeInText className="bg-red">
           <p>
             At the beginning of the year, Nameless.today (later part of Above)
@@ -108,6 +93,25 @@ export default function Home() {
         </FadeInText>
 
         <Balloon />
+        <section
+          className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
+        >
+          <div className="w-[700px]">
+            <p className="mb-10">A Umain hackathon project</p>
+            <div className="text-[100px] text-center">
+              <p className="w-full ">Mainsap</p>
+              <p className="mt-[-60px]">was born</p>
+            </div>
+            <div className="text-center">
+              <p>Ankit</p>
+              <p>Anton</p>
+              <p>Faraz</p>
+              <p>Vika</p>
+              <p>Jon</p>
+              <p>Tomo</p>
+            </div>
+          </div>
+        </section>
         <div className="container mx-auto text-center"></div>
       </main>
       <Footer />
