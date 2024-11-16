@@ -10,7 +10,7 @@ type ImageTrailProps = {
 const ImageTrail = forwardRef<HTMLDivElement, ImageTrailProps>(
   ({ images }, ref) => {
     return (
-      <div ref={ref} className="absolute inset-0 pointer-events-none">
+      <div ref={ref} className="absolute inset-0 pointer-events-none z-50">
         {images.map((num) => (
           <div
             key={num}
