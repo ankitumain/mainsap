@@ -21,10 +21,6 @@ export default function HorizontalScroll({
   paragraphs,
 }: HorizontalScrollProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const styles = {
-    odd: "bg-black text-white justify-start",
-    even: "bg-white text-black justify-end",
-  };
 
   useEffect(() => {
     const section = sectionRef.current;
@@ -53,7 +49,7 @@ export default function HorizontalScroll({
   }, []);
 
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden bg-white">
       <div ref={sectionRef} className="flex flex-nowrap min-h-screen">
         {paragraphs.map((paragraph, index) => (
           <>
@@ -61,7 +57,7 @@ export default function HorizontalScroll({
               key={index}
               className={clsx(
                 "flex items-center transition-colors duration-300 min-w-[100vw]",
-                index % 2 === 0 ? styles.even : styles.odd,
+                "bg-white text-black justify-end",
                 "flex-shrink-0 text-[300px]"
               )}
             >
