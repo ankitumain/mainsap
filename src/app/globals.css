@@ -15,6 +15,13 @@
   }
 }
 
+html,
+body {
+  * {
+    cursor: none;
+  }
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
