@@ -62,7 +62,7 @@ export default function HorizontalScroll({
               )}
             >
               <div className="font-KHInterference">{paragraph.text}</div>
-              <div className="px-32 mt-[-190px] font-khteka">
+              <div className="px-32 mt-[-190px] font-khteka-40">
                 <AnimatedCounter text={paragraph.secondaryText} />
               </div>
             </div>
