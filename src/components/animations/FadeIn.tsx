@@ -34,6 +34,8 @@ export function FadeIn({
           onEnter: () => {
             gsap.to(".word", {
               opacity: 1,
+              scale: 1,
+              "--blur": 0,
               duration: duration,
               ease: "power2.out",
               delay: delay,
