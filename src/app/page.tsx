@@ -4,6 +4,7 @@ import { Intro } from "@/components/intro";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
 import CustomCursor from "@/components/customCursor/CustomCursor";
+import Balloon from "@/components/Balloon/Balloon";
 
 const horizontalScrollTexts = [
   {
@@ -75,6 +76,7 @@ export default function Home() {
             collective, and an ambition to create great change.
           </p>
         </FadeInText>
+        <Balloon />
         <div className="container mx-auto text-center"></div>
       </main>
       <Footer />
