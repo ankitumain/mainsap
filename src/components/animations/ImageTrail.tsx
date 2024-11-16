@@ -18,8 +18,10 @@ const ImageTrail = forwardRef<HTMLDivElement, ImageTrailProps>(
           >
             <Image
               className="absolute left-0 top-0 w-full h-full object-cover"
-              src={`${num}.jpg`}
+              src={`/${num}.jpg`}
               alt={`trail ${num}`}
+              width={100}
+              height={150}
             />
           </div>
         ))}

@@ -17,9 +17,12 @@ export default function ImageTrailContainer() {
     if (!container || !trailImages.length) return;
 
     const handleMouseMove = (e: MouseEvent) => {
-      gsap.to(".trail-image", {
-        x: e.clientX,
-        y: e.clientY,
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      gsap.to(trailImages, {
+        x: x,
+        y: y,
         stagger: -0.2,
       });
     };
