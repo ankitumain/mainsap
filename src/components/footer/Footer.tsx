@@ -1,18 +1,30 @@
 "use client";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [isMounted, setIsMounted] = useState(false);
   const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
 
-  const hasScrolledToBottom = () =>
-    window.innerHeight + window.scrollY >= document.body.offsetHeight - 30;
-
-  window.onscroll = () => {
-    if (hasScrolledToBottom()) {
-      setIsScrolledToBottom(true);
+  const hasScrolledToBottom = () => {
+    if (!isMounted) {
+      return;
     }
+
+    return (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 30
+    );
   };
+
+  useEffect(() => {
+    setIsMounted(true);
+
+    window.onscroll = () => {
+      if (hasScrolledToBottom()) {
+        setIsScrolledToBottom(true);
+      }
+    };
+  }, [isMounted]);
 
   return (
     <footer className="h-screen w-screen z-0 fixed bg-black text-white p-4 font-khteka">

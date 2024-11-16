@@ -5,6 +5,7 @@ import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
 import CustomCursor from "@/components/customCursor/CustomCursor";
 import SlotCounter from 'react-slot-counter';
+import Balloon from "@/components/Balloon/Balloon";
 
 const horizontalScrollTexts = [
   {
@@ -34,6 +35,25 @@ export default function Home() {
 
           </div>
         </div>
+        <section
+          className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
+        >
+          <div className="w-[700px]">
+            <p className="mb-10">A Umain hackathon project</p>
+            <div className="text-[100px] text-center">
+              <p className="w-full ">Mainsap</p>
+              <p className="mt-[-60px]">was born</p>
+            </div>
+            <div className="text-center">
+              <p>Ankit</p>
+              <p>Anton</p>
+              <p>Faraz</p>
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+        </section>
         <FadeInText className="bg-yellow">
           <p>
             Kurppa Hosk, Animal, Keybroker and Curamando come together to build
@@ -84,6 +104,8 @@ export default function Home() {
             collective, and an ambition to create great change.
           </p>
         </FadeInText>
+
+        <Balloon />
         <div className="container mx-auto text-center"></div>
       </main>
       <Footer />
