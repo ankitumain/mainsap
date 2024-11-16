@@ -1,8 +1,11 @@
 "use client";
-import { useRef, useState } from "react";
-import { SplitByWord } from "../splitText/splitByWord";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
+import { SplitByWord } from "../splitText/splitByWord";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export function FadeIn({
   children,
   duration = 1,
@@ -16,28 +19,33 @@ export function FadeIn({
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [splitted, setSplitted] = useState(false);
-  useGSAP(
-    () => {
-      if (!ref.current || !splitted) return;
 
+  useEffect(() => {
+    if (!ref.current || !splitted) return;
+
+    const context = gsap.context(() => {
       gsap.to(".word", {
+        opacity: 0,
         duration: 0.1,
         ease: "power2.out",
-        delay: 0.1,
-
-        onComplete: () => {
-          gsap.to(".word", {
-            opacity: 1,
-            duration: duration,
-            ease: "power2.out",
-            delay: delay,
-            stagger: stagger,
-          });
+        scrollTrigger: {
+          trigger: ref.current,
+          start: "top 90%",
+          onEnter: () => {
+            gsap.to(".word", {
+              opacity: 1,
+              duration: duration,
+              ease: "power2.out",
+              delay: delay,
+              stagger: stagger,
+            });
+          },
         },
       });
-    },
-    { scope: ref, dependencies: [splitted] }
-  );
+    }, ref);
+
+    return () => context.revert();
+  }, [splitted, duration, delay, stagger]);
 
   return (
     <div ref={ref}>
