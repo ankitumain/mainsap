@@ -42,11 +42,22 @@ body {
     font-style: light;
   }
 
-  .font-khteka {
+  .font-khteka-40 {
     @apply text-[40px];
     @apply tracking-neg-2p;
     @apply font-khteka-medium;
   }
+  .font-khteka-80 {
+    @apply text-[80px];
+    @apply tracking-neg-3p;
+    @apply font-khteka-medium;
+  }
+  .font-KHInterference-150 {
+    @apply text-[150px];
+    @apply tracking-neg-4p;
+    @apply font-khinterference-light;
+  }
+
   .font-KHInterference {
     @apply text-[400px];
     @apply tracking-neg-4p;
