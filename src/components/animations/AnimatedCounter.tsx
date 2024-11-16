@@ -104,7 +104,7 @@ export const CounterSection = ({
           "transition-transform duration-1000 ease-in-out font-bold font-KHInterference text-[40px] uppercase",
           hasAnimated ? "-translate-y-[1.5em]" : "translate-y-0"
         )}
-        style={{ transitionDuration: `${(index + 1) * 0.04}s` }}
+        style={{ transitionDuration: `${(index + 1) * 0.02}s` }}
       >
         <span>{previousCharacter}</span>
         <span>{character}</span>
