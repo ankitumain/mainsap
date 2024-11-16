@@ -27,15 +27,22 @@ body {
     src: url("./fonts/KHTeka-Medium.woff2") format("woff2");
     font-style: normal;
   }
+  @font-face {
+    font-family: "KHInterference Light";
+    font-display: swap;
+    src: url("./fonts/KHInterferenceTRIAL-Light.otf") format("opentype");
+    font-style: light;
+  }
 
-  .body-40 {
+  .font-khteka {
     @apply text-[40px];
     @apply tracking-neg-2p;
     @apply font-khteka-medium;
   }
-}
 
-.font-khteka {
-  @apply tracking-neg-2p;
-  @apply font-khteka-medium;
+  .font-KHInterference {
+    @apply text-[400px];
+    @apply tracking-neg-4p;
+    @apply font-khinterference-light;
+  }
 }
