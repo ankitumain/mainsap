@@ -2,6 +2,7 @@ import Footer from "@/components/footer/Footer";
 // import Header from "@/components/header/Header";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import Balloon from "@/components/Balloon/Balloon";
+import CurvedText from "@/components/CurvedText";
 import { YearBlock2019 } from "@/components/YearBlock/YearBlock2019";
 import { YearBlock2020 } from "@/components/YearBlock/YearBlock2020";
 import { YearBlock2021 } from "@/components/YearBlock/YearBlock2021";
@@ -93,25 +94,7 @@ export default function Home() {
         </FadeInText>
 
         <Balloon />
-        <section
-          className={`h-screen px-14 flex justify-center items-center font-khteka bg-white text-black`}
-        >
-          <div className="w-[700px]">
-            <p className="mb-10">A Umain hackathon project</p>
-            <div className="text-[100px] text-center">
-              <p className="w-full ">Mainsap</p>
-              <p className="mt-[-60px]">was born</p>
-            </div>
-            <div className="text-center">
-              <p>Ankit</p>
-              <p>Anton</p>
-              <p>Faraz</p>
-              <p>Vika</p>
-              <p>Jon</p>
-              <p>Tomo</p>
-            </div>
-          </div>
-        </section>
+        <CurvedText />
         <div className="container mx-auto text-center"></div>
       </main>
       <Footer />
