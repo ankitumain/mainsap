@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import clsx from "clsx";
+import { AnimatedCounter } from "@/components/animations/AnimatedCounter";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +67,7 @@ export default function HorizontalScroll({
             >
               <div className="font-KHInterference">{paragraph.text}</div>
               <div className="px-32 mt-[-190px] font-khteka">
-                {paragraph.secondaryText}
+                <AnimatedCounter text={paragraph.secondaryText} />
               </div>
             </div>
           </>

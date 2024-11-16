@@ -4,11 +4,11 @@ import { Intro } from "@/components/intro";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
 
-
 const horizontalScrollTexts = [
   {
     text: "Kurppa Hosk",
-    secondaryText: "Transforming brands and organisations to drive real change",
+    secondaryText:
+      "Transforming brands and organisations to drive real change.",
   },
   {
     text: "Kurppa Hosk Communications",
@@ -20,8 +20,8 @@ const horizontalScrollTexts = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-    {/* <Header /> */}
-    <Intro />
+      {/* <Header /> */}
+      <Intro />
       {/* Main Content */}
       <main className="flex-grow bg-black text-white">
         <FadeInText className="bg-yellow">
