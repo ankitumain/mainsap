@@ -6,6 +6,7 @@
   --background: #ffffff;
   --foreground: #171717;
   --blur: 10px;
+  --scroll: 100%
 }
 
 @media (prefers-color-scheme: dark) {
@@ -52,6 +53,13 @@ body {
     @apply tracking-neg-4p;
     @apply font-khinterference-light;
   }
+}
+
+.mask {
+  background: linear-gradient(0deg, rgba(255,255,255,0.5) var(--scroll), rgba(255,255,255,1) 100%);
+  
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .blur-anim {

@@ -1,5 +1,5 @@
 import Footer from "@/components/footer/Footer";
-// import Header from "@/components/header/Header";
+import Header from "@/components/header/Header";
 import { Intro } from "@/components/intro";
 import FadeInText from "@/components/AnimatedText/FadeInText";
 import HorizontalScroll from "@/components/animations/HorizontalScroll";
@@ -22,6 +22,8 @@ const horizontalScrollTexts = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+    <Header />
+    <Intro />
       <CustomCursor />
       {/* <Header /> */}
       <Intro />
@@ -78,6 +80,7 @@ export default function Home() {
         </FadeInText>
         <Balloon />
         <div className="container mx-auto text-center"></div>
+        <div id="section-5"></div>
       </main>
       <Footer />
     </div>
