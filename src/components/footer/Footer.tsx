@@ -5,8 +5,10 @@ import { useState } from "react";
 export default function Footer() {
   const [isScrolledToBottom, setIsScrolledToBottom] = useState(false);
 
-  const hasScrolledToBottom = () =>
+  const hasScrolledToBottom = () => {
+    if (!window) return false;
     window.innerHeight + window.scrollY >= document.body.offsetHeight - 30;
+  };
 
   window.onscroll = () => {
     if (hasScrolledToBottom()) {
